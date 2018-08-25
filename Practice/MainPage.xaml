@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Practice" x:Class="Practice.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ScrollView>
+        <Grid RowSpacing = "10" ColumnSpacing = "10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "Auto"/>
+                <RowDefinition Height = "*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "2*" />
+            </Grid.ColumnDefinitions> 
+            <Label Grid.Row = "0" Grid.Column = "0" Text="Label1" BackgroundColor = "Silver" />
+            <Label Grid.Row = "0" Grid.Column = "1" Grid.ColumnSpan = "2" Text = "Label2" BackgroundColor = "Silver" />
+            <Label Grid.Row = "1" Grid.Column = "0" Text="Label3" BackgroundColor = "Silver" />
+            <Label Grid.Row = "1" Grid.Column = "1" Text="Label4" BackgroundColor = "Silver" />
+            <Label Grid.Row = "1" Grid.Column = "2" Text="Label4" BackgroundColor = "Silver" />
+            
+        </Grid>
+    </ScrollView>
+    
 </ContentPage>
