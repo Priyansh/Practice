@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using Xamarin.Forms;
 
 namespace Practice
 {
-    public partial class MainPage : TabbedPage
+    public partial class PageTest : ContentPage
     {
-        public MainPage()
+        public PageTest()
         {
             InitializeComponent();
         }

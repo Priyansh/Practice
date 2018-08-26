@@ -1,22 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Practice" x:Class="Practice.MainPage">
-    <ScrollView>
-        <Grid RowSpacing = "10" ColumnSpacing = "10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height = "Auto"/>
-                <RowDefinition Height = "*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width = "*" />
-                <ColumnDefinition Width = "2*" />
-            </Grid.ColumnDefinitions> 
-            <Label Grid.Row = "0" Grid.Column = "0" Text="Label1" BackgroundColor = "Silver" />
-            <Label Grid.Row = "0" Grid.Column = "1" Grid.ColumnSpan = "2" Text = "Label2" BackgroundColor = "Silver" />
-            <Label Grid.Row = "1" Grid.Column = "0" Text="Label3" BackgroundColor = "Silver" />
-            <Label Grid.Row = "1" Grid.Column = "1" Text="Label4" BackgroundColor = "Silver" />
-            <Label Grid.Row = "1" Grid.Column = "2" Text="Label4" BackgroundColor = "Silver" />
-            
-        </Grid>
-    </ScrollView>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Practice" 
+             x:Class="Practice.MainPage"
+             Title = "Welcome Page"
+             BarTextColor = "Red"
+             BackgroundColor = "LightBlue">
     
-</ContentPage>
+    <NavigationPage Title = "Welcome">
+        <x:Arguments>
+            <ContentPage >
+                 <ScrollView>
+                    <Grid RowSpacing = "10" ColumnSpacing = "10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height = "Auto"/>
+                            <RowDefinition Height = "Auto" />
+                        </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width = "Auto" />
+                        <ColumnDefinition Width = "Auto" />
+                    </Grid.ColumnDefinitions> 
+                    <Label Grid.Row = "0" Grid.Column = "0" Text="Label1" BackgroundColor = "Silver" />
+                    <Label Grid.Row = "0" Grid.Column = "1" Grid.ColumnSpan = "2" Text = "Label2" BackgroundColor = "Silver" />
+                    <Label Grid.Row = "1" Grid.Column = "0" Text="Label3" BackgroundColor = "Silver" />
+                    <Label Grid.Row = "1" Grid.Column = "1" Text="Label4" BackgroundColor = "Silver" />
+                    <Button Grid.Row = "1" Grid.Column = "2" Text="CLICK ME" BackgroundColor = "Purple" />
+                    </Grid>
+        
+                    </ScrollView>
+            </ContentPage>
+        </x:Arguments>
+        
+    </NavigationPage>
+    
+    <NavigationPage Title = "About">
+        <x:Arguments>
+            <ContentPage >
+                <StackLayout Orientation = "Vertical" VerticalOptions = "EndAndExpand">
+                 <Button Text = "Next Page" HorizontalOptions = "FillAndExpand" />
+                </StackLayout>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+   
+    <NavigationPage Title = "External">
+        <x:Arguments>
+            <local:PageTest BackgroundColor = "Gray"/>
+        </x:Arguments>    
+    </NavigationPage>
+    
+    
+</TabbedPage>
