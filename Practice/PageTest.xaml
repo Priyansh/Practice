@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Practice.PageTest">
-    <ContentPage.Content>
-        <Label Text = "Submit Text" />
-    </ContentPage.Content>
+    
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Add" x:Name="btnAdd" Clicked="BtnAdd_OnClicked"/>
+            <Button Text="Update" x:Name="btnUpdate" HorizontalOptions="CenterAndExpand" Clicked="BtnUpdate_OnClicked"/>
+            <Button Text="Delete" x:Name="btnDelete" Clicked="BtnDelete_OnClicked" />
+        </StackLayout>
+        <ListView x:Name="lstViewRest">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" Detail="{Binding Body}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+    
 </ContentPage>

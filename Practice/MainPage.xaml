@@ -5,8 +5,8 @@
              x:Class="Practice.MainPage"
              BarTextColor = "Red"
              BackgroundColor = "LightBlue">
-    
-    <NavigationPage Title = "Welcome" Icon = "heart.png">
+
+    <NavigationPage Title = "Welcome"><!--Icon = "heart.png">-->
         <x:Arguments>
             <ContentPage >
                  <ScrollView>
@@ -31,20 +31,21 @@
         </x:Arguments>
         
     </NavigationPage>
-    
-    <NavigationPage Title = "About" Icon = "clock.png">
+
+    <NavigationPage Title = "About"><!--Icon = "clock.png">-->
         <x:Arguments>
             <ContentPage >
                 <StackLayout Orientation = "Vertical" VerticalOptions = "EndAndExpand">
                  <Button Text = "Next Page" HorizontalOptions = "FillAndExpand" />
+                 <Button Text = "Next Page1" HorizontalOptions = "FillAndExpand" />
                 </StackLayout>
             </ContentPage>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title = "External" Icon = "heart.png" >
+    <NavigationPage Title = "External"><!--Icon = "heart.png" >-->
         <x:Arguments>
-            <local:PageTest BackgroundColor = "Gray"/>
+            <local:PageTest/>
         </x:Arguments>    
     </NavigationPage>
     
