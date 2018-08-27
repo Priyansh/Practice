@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Practice" 
              x:Class="Practice.MainPage"
-             Title = "Welcome Page"
              BarTextColor = "Red"
              BackgroundColor = "LightBlue">
     
@@ -42,8 +41,8 @@
             </ContentPage>
         </x:Arguments>
     </NavigationPage>
-   
-    <NavigationPage Title = "External" Icon = "heart.png">
+
+    <NavigationPage Title = "External" Icon = "heart.png" >
         <x:Arguments>
             <local:PageTest BackgroundColor = "Gray"/>
         </x:Arguments>    

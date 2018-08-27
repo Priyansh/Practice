@@ -13,5 +13,10 @@ namespace Practice
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
     }
 }
