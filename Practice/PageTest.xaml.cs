@@ -1,18 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Net.Http;
-using System.Runtime.Serialization.Json;
+using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace Practice
 {
-    public class Post
+    public class Post : INotifyPropertyChanged
     {
+
+        public event PropertyChangedEventHandler PropertyChanged;
         public int Id { get; set; }
-        public string Title { get; set; }
+
+        private string _title;
+        public string Title
+        {
+            get { return _title;}
+            set
+            {
+                if(_title == value)
+                    return;
+                _title = value;
+
+                //OnPropertyChanged();
+                OnPropertyChanged(nameof(Title)); //USE this if not specify "CallerMemberName"
+            }
+        }
         public string Body { get; set; }
+
+        
+
+        protected void OnPropertyChanged(string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
     public partial class PageTest : ContentPage
     {
@@ -61,5 +85,11 @@ namespace Practice
 
             await _client.DeleteAsync(Url + "/" + post.Id);
         }
+
+        private void LstViewRest_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var selectedPost = (e.SelectedItem) as Post;
+        }
+
     }
 }

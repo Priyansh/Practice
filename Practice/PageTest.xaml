@@ -7,7 +7,7 @@
             <Button Text="Update" x:Name="btnUpdate" HorizontalOptions="CenterAndExpand" Clicked="BtnUpdate_OnClicked"/>
             <Button Text="Delete" x:Name="btnDelete" Clicked="BtnDelete_OnClicked" />
         </StackLayout>
-        <ListView x:Name="lstViewRest">
+        <ListView x:Name="lstViewRest" ItemSelected="LstViewRest_OnItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Title}" Detail="{Binding Body}" />

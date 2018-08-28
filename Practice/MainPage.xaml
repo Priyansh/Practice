@@ -6,7 +6,7 @@
              BarTextColor = "Red"
              BackgroundColor = "LightBlue">
 
-    <NavigationPage Title = "Welcome"><!--Icon = "heart.png">-->
+    <NavigationPage Title = "Welcome" Icon = "heart.png">
         <x:Arguments>
             <ContentPage >
                  <ScrollView>
@@ -32,7 +32,7 @@
         
     </NavigationPage>
 
-    <NavigationPage Title = "About"><!--Icon = "clock.png">-->
+    <NavigationPage Title = "About" Icon = "clock.png">
         <x:Arguments>
             <ContentPage >
                 <StackLayout Orientation = "Vertical" VerticalOptions = "EndAndExpand">
@@ -43,7 +43,7 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title = "External"><!--Icon = "heart.png" >-->
+    <NavigationPage Title = "External" Icon = "heart.png" >
         <x:Arguments>
             <local:PageTest/>
         </x:Arguments>    
